@@ -7,8 +7,8 @@
   position: relative;
   min-height: @navbar-height; // Ensure a navbar always shows (e.g., without a .navbar-brand in collapsed mode)
   margin-bottom: 20px;
-  padding-left: @navbar-padding-horizontal;
   padding-right: @navbar-padding-horizontal;
+  padding-left: @navbar-padding-horizontal;
   background-color: @navbar-bg;
   border-radius: @navbar-border-radius;
 
@@ -51,9 +51,9 @@
     }
   }
 
-  // Right aligned contents
+  // left aligned contents
   // Make them full width first so that they align properly on mobile
-  &.pull-right {
+  &.pull-left {
     width: 100%;
   }
 }
@@ -73,8 +73,8 @@
 .navbar-fixed-top,
 .navbar-fixed-bottom {
   position: fixed;
-  right: 0;
   left: 0;
+  right: 0;
   z-index: @zindex-navbar-fixed;
   border-radius: 0;
 }
@@ -129,8 +129,8 @@
 .navbar-brand {
   display: block;
   max-width: 200px;
-  margin-left: auto;
   margin-right: auto;
+  margin-left: auto;
   padding: @navbar-padding-vertical @navbar-padding-horizontal;
   font-size: @font-size-large;
   font-weight: 500;
@@ -148,7 +148,7 @@
 // Collapsible navbar toggle
 .navbar-toggle {
   position: relative;
-  float: right;
+  float: left;
   height: 34px;
   width: 48px;
   .navbar-vertical-align(34px);
@@ -221,11 +221,11 @@
   }
 }
 
-// Right aligned menus need alt position
-.navbar-nav.pull-right > li > .dropdown-menu,
-.navbar-nav > li > .dropdown-menu.pull-right {
-  left: auto;
-  right: 0;
+// left aligned menus need alt position
+.navbar-nav.pull-left > li > .dropdown-menu,
+.navbar-nav > li > .dropdown-menu.pull-left {
+  right: auto;
+  left: 0;
 }
 
 
@@ -328,25 +328,25 @@
 @media screen and (min-width: @grid-float-breakpoint) {
 
   .navbar-brand {
-    float: left;
-    margin-left: -(@navbar-padding-horizontal);
-    margin-right: 5px;
+    float: right;
+    margin-right: -(@navbar-padding-horizontal);
+    margin-left: 5px;
     max-width: none; // Disables the default mobile setting
   }
   .navbar-nav {
-    float: left;
+    float: right;
     // undo margin to make nav extend full height of navbar
     margin-top: 0;
     margin-bottom: 0;
 
     > li {
-      float: left;
+      float: right;
       > a {
         border-radius: 0;
       }
     }
 
-    &.pull-right {
+    &.pull-left {
       width: auto;
     }
   }
@@ -355,7 +355,7 @@
   .navbar-toggle {
     position: relative;
     top: auto;
-    left: auto;
+    right: auto;
     display: none;
   }
   .nav-collapse.collapse {
@@ -384,7 +384,7 @@
 // Add a class to make any element properly align itself vertically within the navbars.
 
 .navbar-text {
-  float: left;
+  float: right;
   padding: 0 @navbar-padding-horizontal;
   .navbar-vertical-align(@line-height-computed);
 }

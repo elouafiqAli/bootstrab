@@ -114,7 +114,7 @@ ol {
 
 // Unstyled keeps list items block level, just removes default browser padding and list-style
 .list-unstyled {
-  padding-left: 0;
+  padding-right: 0;
   list-style: none;
 }
 // Inline turns list items into inline-block
@@ -139,7 +139,7 @@ dt {
   font-weight: bold;
 }
 dd {
-  margin-left: 0; // Undo browser default
+  margin-right: 0; // Undo browser default
 }
 
 // Horizontal description lists
@@ -150,14 +150,14 @@ dd {
 @media (min-width: @grid-float-breakpoint) {
   .dl-horizontal {
     dt {
-      float: left;
+      float: right;
       width: (@component-offset-horizontal - 20);
-      clear: left;
-      text-align: right;
+      clear: right;
+      text-align: left;
       .text-overflow();
     }
     dd {
-      margin-left: @component-offset-horizontal;
+      margin-right: @component-offset-horizontal;
       .clearfix(); // Clear the floated `dt` if an empty `dd` is present
     }
   }
@@ -182,7 +182,8 @@ abbr.initialism {
 blockquote {
   padding: (@line-height-computed / 2) @line-height-computed;
   margin: 0 0 @line-height-computed;
-  border-left: 5px solid @blockquote-border-color;
+  border-right: 5px solid @blockquote-border-color;
+  border-left: 0;
   p {
     font-size: (@font-size-base * 1.25);
     font-weight: 300;
@@ -192,6 +193,7 @@ blockquote {
     margin-bottom: 0;
   }
   small {
+  	text-align: right;
     display: block;
     line-height: @line-height-base;
     color: @blockquote-small-color;
@@ -201,14 +203,14 @@ blockquote {
   }
 
   // Float right with text-align: right
-  &.pull-right {
-    padding-right: 15px;
-    padding-left: 0;
-    border-right: 5px solid @blockquote-border-color;
-    border-left: 0;
+  &.pull-left {
+    padding-left: 15px;
+    padding-right: 0;
+    border-left: 5px solid @blockquote-border-color;
+    border-right: 0;
     p,
     small {
-      text-align: right;
+      text-align: left;
     }
     small {
       &:before {

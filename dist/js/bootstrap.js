@@ -374,7 +374,7 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
     var $active   = this.$element.find('.item.active')
     var $next     = next || $active[type]()
     var isCycling = this.interval
-    var direction = type == 'next' ? 'left' : 'right'
+    var direction = type == 'next' ? 'right' : 'left'
     var fallback  = type == 'next' ? 'first' : 'last'
     var that      = this
 
@@ -1477,7 +1477,7 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
   if (!$.fn.tooltip) throw new Error('Popover requires tooltip.js')
 
   Popover.DEFAULTS = $.extend({} , $.fn.tooltip.Constructor.DEFAULTS, {
-    placement: 'right'
+    placement: 'left'
   , trigger: 'click'
   , content: ''
   , template: '<div class="popover"><div class="arrow"></div><h3 class="popover-title"></h3><div class="popover-content"></div></div>'

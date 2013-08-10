@@ -137,7 +137,7 @@ body {
 .bs-masthead-links {
   margin-top: 20px;
   margin-bottom: 20px;
-  padding-left: 0;
+  padding-right: 0;
   list-style: none;
   text-align: center;
 }
@@ -146,7 +146,7 @@ body {
   color: #999;
 }
 .bs-masthead-links li + li {
-  margin-left: 20px;
+  margin-right: 20px;
 }
 .bs-masthead-links a {
   color: #fff;
@@ -158,7 +158,7 @@ body {
 -------------------------------------------------- */
 
 .bs-customizer .toggle {
-  float: right;
+  float: left;
 }
 .bs-customizer label {
   margin-top: 10px;
@@ -221,7 +221,7 @@ body {
   height: auto !important;
   font-size: 13px !important;
   line-height: 16px !important;
-  text-align: left;
+  text-align: right;
   background: none !important;
   border: 0 !important;
   border-top: 1px solid #e5e5e5 !important;
@@ -235,14 +235,14 @@ body {
   display: block !important;
   width: auto !important;
   height: auto !important;
-  margin-left: 145px !important;
+  margin-right: 145px !important;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 }
 .carbonad-text {
   padding-top: 0 !important;
 }
 .carbonad-tag {
-  text-align: left !important;
+  text-align: right !important;
 }
 .carbonad #azcarbon > img {
   display: none; /* hide what I assume are tracking images */
@@ -279,7 +279,7 @@ body {
 .bs-sidebar .nav > li > a:focus {
   text-decoration: none;
   background-color: #e5e3e9;
-  border-right: 1px solid #dbd8e0;
+  border-left: 1px solid #dbd8e0;
 }
 .bs-sidebar .nav > .active > a,
 .bs-sidebar .nav > .active:hover > a,
@@ -287,7 +287,7 @@ body {
   font-weight: bold;
   color: #563d7c;
   background-color: transparent;
-  border-right: 1px solid #563d7c;
+  border-left: 1px solid #563d7c;
 }
 
 /* Nav: second level (shown on .active) */
@@ -298,7 +298,7 @@ body {
 .bs-sidebar .nav .nav > li > a {
   padding-top:    3px;
   padding-bottom: 3px;
-  padding-left: 30px;
+  padding-right: 30px;
   font-size: 90%;
 }
 
@@ -311,7 +311,7 @@ body {
 .bs-callout {
   margin: 20px 0;
   padding: 15px 30px 15px 15px;
-  border-left: 5px solid #eee;
+  border-right: 5px solid #eee;
 }
 .bs-callout h4 {
   margin-top: 0;
@@ -376,7 +376,7 @@ body {
   content: "Example";
   position: absolute;
   top:  15px;
-  left: 15px;
+  right: 15px;
   font-size: 12px;
   font-weight: bold;
   color: #bbb;
@@ -388,8 +388,8 @@ body {
 .bs-example + .prettyprint,
 .bs-example + .highlight {
   margin-top: 0;
-  border-top-left-radius: 0;
   border-top-right-radius: 0;
+  border-top-left-radius: 0;
 }
 
 /* Tweak content of examples for optimum awesome */
@@ -469,8 +469,8 @@ body {
 .bs-navbar-top-example .navbar-fixed-top,
 .bs-navbar-bottom-example .navbar-fixed-bottom {
   position: relative;
-  margin-left: 0;
   margin-right: 0;
+  margin-left: 0;
 }
 .bs-navbar-top-example .navbar-fixed-top {
   top: -1px;
@@ -506,22 +506,22 @@ body {
 .bs-example-modal .modal {
   position: relative;
   top: auto;
-  right: auto;
   left: auto;
+  right: auto;
   bottom: auto;
   z-index: 1;
   display: block;
 }
 .bs-example-modal .modal-dialog {
-  left: auto;
-  margin-left: auto;
+  right: auto;
   margin-right: auto;
+  margin-left: auto;
 }
 
 /* Example dropdowns */
 .bs-example > .dropdown > .dropdown-menu,
-.bs-example-submenu > .pull-left > .dropup > .dropdown-menu,
-.bs-example-submenu > .pull-left > .dropdown > .dropdown-menu {
+.bs-example-submenu > .pull-right > .dropup > .dropdown-menu,
+.bs-example-submenu > .pull-right > .dropdown > .dropdown-menu {
   position: static;
   display: block;
   margin-bottom: 5px;
@@ -529,8 +529,8 @@ body {
 .bs-example-submenu {
   min-height: 230px;
 }
-.bs-example-submenu > .pull-left + .pull-left {
-  margin-left: 20px;
+.bs-example-submenu > .pull-right + .pull-right {
+  margin-right: 20px;
 }
 
 /* Example tabbable tabs */
@@ -551,7 +551,7 @@ body {
 .bs-example-popover .popover {
   position: relative;
   display: block;
-  float: left;
+  float: right;
   width: 260px;
   margin: 20px;
 }
@@ -592,11 +592,11 @@ body {
   }
   .bs-table-scrollable .table th:first-child,
   .bs-table-scrollable .table td:first-child {
-    border-left: 0;
+    border-right: 0;
   }
   .bs-table-scrollable .table th:last-child,
   .bs-table-scrollable .table td:last-child {
-    border-right: 0;
+    border-left: 0;
   }
   .bs-table-scrollable .table tr:last-child th,
   .bs-table-scrollable .table tr:last-child td {
@@ -637,17 +637,17 @@ body {
 ------------------------- */
 .responsive-utilities-test {
   margin-top: 5px;
-  padding-left: 0;
+  padding-right: 0;
   list-style: none;
   overflow: hidden; /* clear floats */
 }
 .responsive-utilities-test li {
   position: relative;
-  float: left;
+  float: right;
   width: 25%;
 }
 .responsive-utilities-test li + li {
-  margin-left: 10px;
+  margin-right: 10px;
 }
 .responsive-utilities-test span {
   padding: 15px 10px;
@@ -687,14 +687,14 @@ body {
 }
 .footer-links {
   margin: 10px 0;
-  padding-left: 0;
+  padding-right: 0;
 }
 .footer-links li {
   display: inline;
   padding: 0 2px;
 }
 .footer-links li:first-child {
-  padding-left: 0;
+  padding-right: 0;
 }
 
 /* Social proof buttons from GitHub & Twitter */
@@ -704,7 +704,7 @@ body {
 .bs-social-buttons {
   display: inline-block;
   margin-bottom: 0;
-  padding-left: 0;
+  padding-right: 0;
   list-style: none;
 }
 .bs-social-buttons li {
@@ -712,7 +712,7 @@ body {
   line-height: 1;
 }
 .bs-social-buttons li + li {
-  margin-left: 15px;
+  margin-right: 15px;
 }
 .bs-social-buttons .twitter-follow-button {
   width: 225px !important;
@@ -765,9 +765,9 @@ input.focused {
 .highlight pre .lineno {
   display: inline-block;
   width: 22px;
-  padding-right: 5px;
-  margin-right: 10px;
-  text-align: right;
+  padding-left: 5px;
+  margin-left: 10px;
+  text-align: left;
   color: #bebec5;
 }
 
@@ -793,7 +793,7 @@ input.focused {
 
   .bs-header {
     font-size: 21px;
-    text-align: left;
+    text-align: right;
   }
   .bs-header h1 {
     font-size: 60px;
@@ -801,8 +801,8 @@ input.focused {
   }
 
   .bs-example {
-    margin-left: 0;
     margin-right: 0;
+    margin-left: 0;
     background-color: #fff;
     border-width: 1px;
     border-color: #ddd;
@@ -834,8 +834,8 @@ input.focused {
     font-size: 100px;
   }
   .bs-masthead .lead {
-    margin-left: 15%;
     margin-right: 15%;
+    margin-left: 15%;
     font-size: 30px;
   }
 
@@ -868,12 +868,12 @@ input.focused {
   }
   .bs-header h1,
   .bs-header p {
-    margin-right: 380px;
+    margin-left: 380px;
   }
   .carbonad {
     position: absolute;
     top: 20px;
-    right: 0;
+    left: 0;
     padding: 15px !important;
     width: 330px !important;
     min-height: 132px;

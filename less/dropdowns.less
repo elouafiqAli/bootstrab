@@ -9,11 +9,11 @@
   display: inline-block;
   width: 0;
   height: 0;
-  margin-left: 2px;
+  margin-right: 2px;
   vertical-align: middle;
   border-top:   @caret-width-base solid @dropdown-caret-color;
-  border-right: @caret-width-base solid transparent;
-  border-left:  @caret-width-base solid transparent;
+  border-left: @caret-width-base solid transparent;
+  border-right:  @caret-width-base solid transparent;
   content: "";
 }
 
@@ -28,10 +28,10 @@
 .dropdown-menu {
   position: absolute;
   top: 100%;
-  left: 0;
+  right: 0;
   z-index: @zindex-dropdown;
   display: none; // none by default, but block on "open" of the menu
-  float: left;
+  float: right;
   min-width: 160px;
   padding: 5px 0;
   margin: 2px 0 0; // override default ul
@@ -43,10 +43,10 @@
   .box-shadow(0 6px 12px rgba(0,0,0,.175));
   .background-clip(padding-box);
 
-  // Aligns the dropdown menu to right
-  &.pull-right {
-    right: 0;
-    left: auto;
+  // Aligns the dropdown menu to left
+  &.pull-left {
+    left: 0;
+    right: auto;
   }
 
   // Dividers (basically an hr) within the dropdown
@@ -151,11 +151,11 @@
   z-index: @zindex-dropdown - 10;
 }
 
-// Right aligned dropdowns
+// Left aligned dropdowns
 // ---------------------------
-.pull-right > .dropdown-menu {
-  right: 0;
-  left: auto;
+.pull-left > .dropdown-menu {
+  left: 0;
+  right: auto;
 }
 
 // Allow for dropdowns to go bottom up (aka, dropup-menu)
